@@ -2,22 +2,28 @@ run = True
 bag = []
 print("Välkommen till påsen🎒")
 while run:
-    print(" ")
+    print("_________________________")
     print("Visa innehållet👓     [V]")
     print("Spara i påsen📁       [S]")
-    print("Sök efter innehåll🔍  [L]")
-    print("Töm påsen🗑️            [C]")
+    print("Sök efter föremål🔍   [L]")
+    print("Ta bort föremål🗑️      [R]")
     print("Avsluta❌             [Q]")
 
     choice = input("Ange ditt val: ")
     if choice.lower() == "v":
         for thing in bag:
             print(thing)
+        else:
+            print("Påsen är tom just nu🕳️")
     elif choice.lower() == "s":
         bag.append(input("Ange vad du vill spara📁: "))
-    elif choice.lower() == "c":
-        bag.clear()
-        print("Påsen har tömts🗑️")
+    elif choice.lower() == "r":
+        query = input("Ange föremålet du vill ta bort🗑️ : ")
+        if query.lower() in bag:
+            bag.remove(query)
+            print(f"Du tog bort {query}🗑️")
+        else:
+            print(f"Du kunde inte hitta {query} i påsen🚫")
     elif choice.lower() == "q":
         run = False
         print("Programmet har avslutats❌")
