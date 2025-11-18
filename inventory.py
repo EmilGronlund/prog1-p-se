@@ -1,6 +1,7 @@
+from colorama import Fore
 run = True
 bag = []
-print("Välkommen till påsen🎒")
+print(Fore.BLACK + "Välkommen till påsen🎒")
 while run:
     print("_________________________")
     print("Visa innehållet👓     [V]")
@@ -13,7 +14,7 @@ while run:
     if choice.lower() == "v":
         for thing in bag:
             print(thing)
-        else:
+        if not bag:
             print("Påsen är tom just nu🕳️")
     elif choice.lower() == "s":
         bag.append(input("Ange vad du vill spara📁: "))
