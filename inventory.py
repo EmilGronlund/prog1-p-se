@@ -6,7 +6,7 @@ while run:
     print("_________________________")
     print("Visa innehållet👓     [V]")
     print("Spara i påsen📁       [S]")
-    print("Sök efter föremål🔍   [L]")
+    print("Leta efter föremål🔍  [L]")
     print("Ta bort föremål🗑️      [R]")
     print("Avsluta❌             [Q]")
 
@@ -29,7 +29,7 @@ while run:
         run = False
         print("Programmet har avslutats❌")
     elif choice.lower() == "l":
-        query = input("Ange vad du vill söka efter🔍: ")
+        query = input("Ange vad du vill leta efter🔍: ")
         if query.lower() in bag:
             print(f"Du hittade {query} i påsen✅")
         else:
